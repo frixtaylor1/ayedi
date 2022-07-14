@@ -1,0 +1,19 @@
+@ECHO OFF
+ECHO Compiling program... 
+
+:: Compile Object Code...
+g++ -Wall -std=c++11 -c .\src\*.cpp
+g++ -Wall -std=c++11 -c .\main.cpp
+
+:: Compile the Binary...
+g++ .\*.o -o main.exe
+
+:: Delete the object códe...
+DEL .\*.o
+ECHO Done...
+
+:: Execute the program...
+START .\main.exe
+
+ECHO Press a key to continue. 
+PAUSE
